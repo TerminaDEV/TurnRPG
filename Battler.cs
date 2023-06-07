@@ -33,7 +33,7 @@ public abstract class Battler
         if (this.Stance != PowerStance.Still) return false;
         switch (target.Stance)
         {
-            //TODO: Ебани события чтобы не делать колхоз пэжэ
+            //TODO: Сделай события чтобы не делать колхоз пэжэ
             case PowerStance.Still:
 
                 if (this.Attack - target.Defence < 0) break;
@@ -48,7 +48,6 @@ public abstract class Battler
                 {
 					target.DefendedAttacks = 0;
 					target.HitPoints -= Attack;
-                    //Вот этот колхоз ес чо :downArrow:
 					Console.WriteLine($"{this.Name} пробивает защиту {target.Name}\n" +
 									  $"и наносит {this.Attack} чистого урона!");
 				}
